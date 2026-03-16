@@ -123,9 +123,6 @@ export default function App() {
               <a className="btn btn-primary" href="#contact">
                 Request a Quote
               </a>
-              <a className="btn btn-secondary" href="tel:+4420335986058">
-                Call 0203 359 86058
-              </a>
               <a
                 className="btn btn-secondary"
                 href="mailto:info@dbx1sparky.co.uk"
@@ -134,7 +131,7 @@ export default function App() {
               </a>
               <a
                 className="btn btn-secondary"
-                href="https://wa.me/447884067740"
+                href="https://wa.me/447000000000"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -255,8 +252,6 @@ export default function App() {
             London.
           </p>
           <div className="contact-box">
-            <p><strong>Phone:</strong> 0203 359 86058</p>
-            <p><strong>WhatsApp:</strong> 07884 067740</p>
             <p><strong>Email:</strong> info@dbx1sparky.co.uk</p>
             <p><strong>Website:</strong> DBX1Sparky.co.uk</p>
             <p><strong>Location:</strong> London, England</p>
