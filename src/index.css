@@ -28,9 +28,18 @@ html {
   scroll-behavior: smooth;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
   background: var(--bg);
   color: var(--text);
 }
@@ -68,7 +77,12 @@ img {
 
 .logo {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  color: inherit;
+}
+
+body.dark .logo {
+  color: #ffffff;
 }
 
 .sublogo {
@@ -92,6 +106,27 @@ img {
   cursor: pointer;
   font-weight: 600;
   background: transparent;
+  color: var(--text);
+}
+
+.theme-btn {
+  font-size: 1.3rem;
+  padding: 8px 12px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+body.dark .theme-btn {
+  color: #ffffff;
+  border-color: #cbd5e1;
 }
 
 .btn-primary {
@@ -133,14 +168,16 @@ img {
 
 .hero h2 {
   font-size: 2.5rem;
-  line-height: 1.15;
+  line-height: 1.25;
   margin: 0 0 16px;
+  font-weight: 600;
 }
 
 .hero p {
   color: var(--muted);
   font-size: 1.1rem;
-  line-height: 1.7;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
 }
 
 .hero-buttons {
@@ -170,6 +207,7 @@ img {
 .section h3 {
   font-size: 2rem;
   margin-top: 0;
+  font-weight: 600;
 }
 
 .section-intro {
@@ -208,6 +246,7 @@ img {
 .card h4 {
   margin-top: 0;
   margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
 .card p,
@@ -246,6 +285,10 @@ img {
 .team-img {
   border-radius: 16px;
   margin-bottom: 16px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 .contact {
@@ -291,4 +334,37 @@ img {
   .nav-links {
     gap: 12px;
   }
+}
+
+.logo-3d {
+  display: inline-block;
+  font-weight: 700;
+  color: #111827;
+  text-shadow: 
+    3px 3px 0px rgba(0, 0, 0, 0.1),
+    6px 6px 8px rgba(0, 0, 0, 0.15);
+  letter-spacing: -0.02em;
+  transform: perspective(1200px) rotateX(5deg) rotateY(-2deg);
+}
+
+.logo-x {
+  color: #22c55e;
+  font-weight: 700;
+  text-shadow: 
+    2px 2px 4px rgba(34, 197, 94, 0.3);
+}
+
+body.dark .logo-3d {
+  color: #ffffff;
+  text-shadow: 
+    3px 3px 0px rgba(255, 255, 255, 0.2),
+    6px 6px 12px rgba(255, 255, 255, 0.3),
+    0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+body.dark .logo-x {
+  color: #4ade80;
+  text-shadow: 
+    2px 2px 6px rgba(74, 222, 128, 0.5),
+    0px 0px 12px rgba(74, 222, 128, 0.4);
 }

@@ -11,32 +11,38 @@ export default function App() {
     {
       title: "Landlord EICR Certificates",
       description:
-        "Electrical Installation Condition Reports for landlords, letting agents, and property managers across London."
+        "Electrical Installation Condition Reports for landlords, letting agents, and property managers across London.",
+      icon: "⚡"
     },
     {
       title: "Inspection & Testing",
       description:
-        "Professional inspection and testing for domestic and commercial electrical systems to help keep properties safe and compliant."
+        "Professional inspection and testing for domestic and commercial electrical systems to help keep properties safe and compliant.",
+      icon: "🔍"
     },
     {
       title: "New Installations",
       description:
-        "Full and partial electrical installations for homes, flats, offices, shops, and other commercial spaces."
+        "Full and partial electrical installations for homes, flats, offices, shops, and other commercial spaces.",
+      icon: "🔧"
     },
     {
       title: "Consumer Unit Upgrades",
       description:
-        "Modern consumer unit and fuse board upgrades to improve safety, reliability, and compliance."
+        "Modern consumer unit and fuse board upgrades to improve safety, reliability, and compliance.",
+      icon: "📦"
     },
     {
       title: "Fault Finding",
       description:
-        "Fast diagnosis of electrical faults, tripping circuits, power loss, and intermittent electrical issues."
+        "Fast diagnosis of electrical faults, tripping circuits, power loss, and intermittent electrical issues.",
+      icon: "🚨"
     },
     {
       title: "Minor Works & Remedials",
       description:
-        "Sockets, lighting, repairs, additions, and remedial works carried out professionally and neatly."
+        "Sockets, lighting, repairs, additions, and remedial works carried out professionally and neatly.",
+      icon: "🛠️"
     }
   ];
 
@@ -45,25 +51,25 @@ export default function App() {
       name: "Dawain (Rasta)",
       role: "CEO & Lead Electrician",
       bio: "Founder of DBX1 Electrician, leading the business with a strong focus on quality workmanship, safety, and reliable customer service across domestic and commercial electrical projects.",
-      image: "https://via.placeholder.com/400x280?text=Dawain"
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23FFD700' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23D2691E'/%3E%3Ccircle cx='135' cy='90' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='6' fill='%23000'/%3E%3Cpath d='M 140 110 Q 150 120 160 110' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='170' rx='55' ry='70' fill='%23FF6347'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23D2691E' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23D2691E' rx='5'/%3E%3C/svg%3E"
     },
     {
       name: "Kirk",
       role: "Qualified Electrician",
       bio: "Experienced electrician supporting domestic and commercial electrical work, including installations, inspections, and testing.",
-      image: "https://via.placeholder.com/400x280?text=Kirk"
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%234169E1' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Ccircle cx='135' cy='90' r='7' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='7' fill='%23000'/%3E%3Cpath d='M 140 115 Q 150 125 160 115' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='65' fill='%230047AB'/%3E%3Crect x='105' y='165' width='20' height='85' fill='%23FFDBAC' rx='5'/%3E%3Crect x='175' y='165' width='20' height='85' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
     },
     {
       name: "Dunga",
       role: "Qualified Electrician",
       bio: "Skilled in practical site work, fault finding, upgrades, and general electrical services for a wide range of properties.",
-      image: "https://via.placeholder.com/400x280?text=Dunga"
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%238B4513' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23704214'/%3E%3Ccircle cx='135' cy='88' r='7' fill='%23FFD700'/%3E%3Ccircle cx='165' cy='88' r='7' fill='%23FFD700'/%3E%3Ccircle cx='120' cy='110' r='4' fill='%23000'/%3E%3Ccircle cx='180' cy='110' r='4' fill='%23000'/%3E%3Cpath d='M 140 120 Q 150 130 160 120' stroke='%23FFF' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%23228B22'/%3E%3Crect x='110' y='160' width='16' height='85' fill='%23704214' rx='5'/%3E%3Crect x='174' y='160' width='16' height='85' fill='%23704214' rx='5'/%3E%3C/svg%3E"
     },
     {
       name: "Johnny",
       role: "Qualified Electrician",
       bio: "Delivers dependable support across inspections, installations, testing, and remedial works for DBX1 Electrician customers.",
-      image: "https://via.placeholder.com/400x280?text=Johnny"
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23FF8C00' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Cpath d='M 130 85 Q 135 80 140 85' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cpath d='M 160 85 Q 165 80 170 85' stroke='%23000' stroke-width='2' fill='none'/%3E%3Ccircle cx='138' cy='100' r='5' fill='%23000'/%3E%3Ccircle cx='162' cy='100' r='5' fill='%23000'/%3E%3Cpath d='M 140 115 L 160 115 L 155 125 L 145 125 Z' fill='%23FF69B4'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%2300CED1'/%3E%3Crect x='110' y='155' width='18' height='90' fill='%23FFDBAC' rx='5'/%3E%3Crect x='172' y='155' width='18' height='90' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
     }
   ];
 
@@ -87,7 +93,7 @@ export default function App() {
       <header className="header">
         <div className="container nav">
           <div>
-            <h1 className="logo">DBX1 Electrician</h1>
+            <h1 className="logo"><span className="logo-3d">db<span className="logo-x">X</span>1</span> Electrician</h1>
             <p className="sublogo">Domestic & Commercial Electrical Services</p>
           </div>
 
@@ -98,7 +104,7 @@ export default function App() {
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
             <button className="theme-btn" onClick={() => setDark(!dark)}>
-              {dark ? "Light Mode" : "Dark Mode"}
+              {dark ? "☀️" : "🌙"}
             </button>
           </div>
         </div>
@@ -174,6 +180,7 @@ export default function App() {
           <div className="grid three">
             {services.map((service) => (
               <div key={service.title} className="card">
+                <div className="service-icon">{service.icon}</div>
                 <h4>{service.title}</h4>
                 <p>{service.description}</p>
               </div>
