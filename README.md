@@ -1,16 +1,87 @@
-# React + Vite
+# dbX1 Electrician - Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional electrical services website for DBX1 Electrician, serving London with EICR certificates, inspections, testing, installations, and more.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Design & UX
+- **dbX1 3D Logo** - Soft 3D effect with bright green "X"
+- **Dark Mode Support** - Toggle between light and dark themes with moon/sun icons
+- **Responsive Design** - Works perfectly on all devices
+- **Modern Typography** - Inter & Poppins fonts for excellent readability
 
-## React Compiler
+### Content Sections
+- **Hero Section** - Eye-catching intro with quick quote form
+- **Services** - 6 electrical services with fun emoji icons:
+  - ⚡ Landlord EICR Certificates
+  - 🔍 Inspection & Testing
+  - 🔧 New Installations
+  - 📦 Consumer Unit Upgrades
+  - 🚨 Fault Finding
+  - 🛠️ Minor Works & Remedials
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Team** - Meet the DBX1 team with cartoon character avatars
+- **Reviews** - Customer testimonials
+- **Contact** - Phone, WhatsApp, email, and contact form
 
-## Expanding the ESLint configuration
+### Technology Stack
+- **React 19** - Modern UI framework
+- **Vite 8** - Fast build tool with HMR
+- **Google Fonts** - Inter & Poppins for typography
+- **Responsive CSS** - Mobile-first design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📋 Services Offered
+
+- EICR (Electrical Installation Condition Reports)
+- Electrical inspections & testing
+- New electrical installations
+- Consumer unit & fuse board upgrades
+- Fault finding & diagnostics
+- Minor electrical works & repairs
+
+## 👥 Team
+
+- **Dawain (Rasta)** - CEO & Lead Electrician
+- **Kirk** - Qualified Electrician
+- **Dunga** - Qualified Electrician
+- **Johnny** - Qualified Electrician
+
+## 🛠️ Development
+
+### Install Dependencies
+```bash
+npm install
+```
+
+### Start Dev Server
+```bash
+npm run dev
+```
+Server runs at `http://localhost:5173/`
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Run Linter
+```bash
+npm run lint
+```
+
+### Preview Build
+```bash
+npm run preview
+```
+
+## 📞 Contact Information
+
+- **Phone:** 0203 359 86058
+- **WhatsApp:** 07884 067740
+- **Email:** info@dbx1sparky.co.uk
+- **Website:** DBX1Sparky.co.uk
+- **Location:** London, England
+
+## 📄 License
+
+Private project for DBX1 Electrician
