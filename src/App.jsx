@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import dbx1Logo from "./assets/dbx1_logo.png";
 
 // ── EmailJS credentials ──────────────────────────────────────────────────────
 // 1. Sign up free at https://www.emailjs.com
@@ -11,6 +12,17 @@ const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
 // ─────────────────────────────────────────────────────────────────────────────
+
+function BrandName() {
+  return <>db<span className="brand-x">X</span>1</>;
+}
+
+function renderBrand(text) {
+  return text.split("dbX1").reduce((acc, part, i) => {
+    if (i === 0) return [part];
+    return [...acc, <BrandName key={i} />, part];
+  }, []);
+}
 
 export default function App() {
   const [dark, setDark] = useState(false);
@@ -80,27 +92,51 @@ export default function App() {
   const team = [
     {
       name: "Dawain (Rasta)",
-      role: "CEO & Lead Electrician",
-      bio: "Founder of DBX1 Electrician, leading the business with a strong focus on quality workmanship, safety, and reliable customer service across domestic and commercial electrical projects.",
+      role: "Qualified Electrician",
+      bio: "Founder of dbX1 Electrician, delivering high-quality electrical services with a strong commitment to safety, precision, and dependable customer service across both domestic and commercial projects..",
       image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23FFD700' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23D2691E'/%3E%3Ccircle cx='135' cy='90' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='6' fill='%23000'/%3E%3Cpath d='M 140 110 Q 150 120 160 110' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='170' rx='55' ry='70' fill='%23FF6347'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23D2691E' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23D2691E' rx='5'/%3E%3C/svg%3E"
     },
     {
       name: "Kirk",
       role: "Qualified Electrician",
-      bio: "Experienced electrician supporting domestic and commercial electrical work, including installations, inspections, and testing.",
+      bio: "Skilled electrician with experience across domestic and commercial projects, providing high-quality installations and dependable electrical services.",
       image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%234169E1' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Ccircle cx='135' cy='90' r='7' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='7' fill='%23000'/%3E%3Cpath d='M 140 115 Q 150 125 160 115' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='65' fill='%230047AB'/%3E%3Crect x='105' y='165' width='20' height='85' fill='%23FFDBAC' rx='5'/%3E%3Crect x='175' y='165' width='20' height='85' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
     },
     {
       name: "Dunga",
       role: "Qualified Electrician",
-      bio: "Skilled in practical site work, fault finding, upgrades, and general electrical services for a wide range of properties.",
+      bio: "Highly skilled in practical site work, fault diagnosis, inspection and testing, and electrical upgrades, delivering dependable solutions across a diverse range of residential and commercial properties.",
       image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%238B4513' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23704214'/%3E%3Ccircle cx='135' cy='88' r='7' fill='%23FFD700'/%3E%3Ccircle cx='165' cy='88' r='7' fill='%23FFD700'/%3E%3Ccircle cx='120' cy='110' r='4' fill='%23000'/%3E%3Ccircle cx='180' cy='110' r='4' fill='%23000'/%3E%3Cpath d='M 140 120 Q 150 130 160 120' stroke='%23FFF' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%23228B22'/%3E%3Crect x='110' y='160' width='16' height='85' fill='%23704214' rx='5'/%3E%3Crect x='174' y='160' width='16' height='85' fill='%23704214' rx='5'/%3E%3C/svg%3E"
     },
     {
       name: "Johnny",
       role: "Qualified Electrician",
-      bio: "Delivers dependable support across inspections, installations, testing, and remedial works for DBX1 Electrician customers.",
+      bio:  "Providing expert support across installations, inspection and testing, and remedial works, with a specialism in high-end electrical installations and bespoke design projects for dbX1 Electrician customers.",
       image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23FF8C00' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Cpath d='M 130 85 Q 135 80 140 85' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cpath d='M 160 85 Q 165 80 170 85' stroke='%23000' stroke-width='2' fill='none'/%3E%3Ccircle cx='138' cy='100' r='5' fill='%23000'/%3E%3Ccircle cx='162' cy='100' r='5' fill='%23000'/%3E%3Cpath d='M 140 115 L 160 115 L 155 125 L 145 125 Z' fill='%23FF69B4'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%2300CED1'/%3E%3Crect x='110' y='155' width='18' height='90' fill='%23FFDBAC' rx='5'/%3E%3Crect x='172' y='155' width='18' height='90' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
+    },
+    {
+      name: "Tafari",
+      role: "Apprentice Electrician",
+      bio: "Newly joined the dbX1 Electrician team, Tafari is an apprentice electrician learning the trade and gaining hands-on experience across domestic and commercial electrical work.",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%236A0DAD' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23704214'/%3E%3Ccircle cx='135' cy='90' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='6' fill='%23000'/%3E%3Cpath d='M 140 112 Q 150 122 160 112' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%239B30FF'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23704214' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23704214' rx='5'/%3E%3C/svg%3E"
+    },
+    {
+      name: "Fabian",
+      role: "Sales & Communications",
+      bio: "Fabian works closely with the dbX1 Electrician team on the soft side of operations — handling sales, client communications, and ensuring every customer has a smooth and professional experience from first contact to job completion.",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23007B5E' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Ccircle cx='135' cy='90' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='6' fill='%23000'/%3E%3Cpath d='M 138 112 Q 150 124 162 112' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%2300A86B'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23FFDBAC' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
+    },
+    {
+      name: "Stacy",
+      role: "Marketing Manager",
+      bio: "Stacy leads all marketing activity for dbX1 Electrician, managing both online presence and local advertising to grow the brand and bring in new customers across London.",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23C2185B' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Cpath d='M 120 75 Q 150 55 180 75 Q 185 95 150 90 Q 115 95 120 75' fill='%23A0522D'/%3E%3Ccircle cx='135' cy='92' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='92' r='6' fill='%23000'/%3E%3Cpath d='M 138 112 Q 150 124 162 112' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%23E91E8C'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23FFDBAC' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
+    },
+    {
+      name: "Dave (AI)",
+      role: "AI Assistant & Online Operations",
+      bio: "Dave is dbX1 Electrician's AI assistant, managing online communications, enquiries, and scheduling around the clock — ensuring no lead is missed and the team stays free to focus on the work.",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%230A0A2E' width='300' height='300'/%3E%3Crect x='95' y='60' width='110' height='90' rx='18' fill='%2300CFFF' opacity='0.15'/%3E%3Crect x='105' y='70' width='90' height='70' rx='12' fill='%2300CFFF' opacity='0.3'/%3E%3Ccircle cx='135' cy='100' r='10' fill='%2300CFFF'/%3E%3Ccircle cx='165' cy='100' r='10' fill='%2300CFFF'/%3E%3Ccircle cx='135' cy='100' r='4' fill='%23fff'/%3E%3Ccircle cx='165' cy='100' r='4' fill='%23fff'/%3E%3Crect x='130' y='118' width='40' height='5' rx='3' fill='%2300CFFF' opacity='0.8'/%3E%3Crect x='148' y='150' width='4' height='20' fill='%2300CFFF' opacity='0.6'/%3E%3Cellipse cx='150' cy='200' rx='60' ry='55' fill='%23003A5C'/%3E%3Ccircle cx='110' cy='175' r='5' fill='%2300CFFF' opacity='0.7'/%3E%3Ccircle cx='190' cy='175' r='5' fill='%2300CFFF' opacity='0.7'/%3E%3Ctext x='150' y='210' text-anchor='middle' font-size='11' fill='%2300CFFF' opacity='0.9' font-family='monospace'%3EAI%3C%2Ftext%3E%3C%2Fsvg%3E"
     }
   ];
 
@@ -126,10 +162,10 @@ export default function App() {
     <div>
       <header className="header">
         <div className="container nav">
-          <div>
-            <h1 className="logo"><span className="logo-3d">db<span className="logo-x">X</span>1</span> Electrician</h1>
-            <p className="sublogo">Domestic & Commercial Electrical Services</p>
-          </div>
+          <a href="#" className="logo-link">
+            <img src={dbx1Logo} alt="dbX1 Electrician" className="site-logo" />
+            <span className="sublogo">Domestic &amp; Commercial Electrical Services</span>
+          </a>
 
           <div className="nav-links">
             <a href="#services">Services</a>
@@ -153,7 +189,7 @@ export default function App() {
               Commercial Electrical Work
             </h2>
             <p>
-              DBX1 Electrician helps landlords, homeowners, businesses, and
+              <BrandName /> Electrician helps landlords, homeowners, businesses, and
               letting agents with EICRs, electrical inspections, fault finding,
               remedial works, consumer unit upgrades, and new installations
               across London.
@@ -248,7 +284,7 @@ export default function App() {
             <p className="section-label">About</p>
             <h3>Qualified electricians with 25+ years of experience</h3>
             <p>
-              DBX1 Electrician is a London-based electrical business delivering
+              <BrandName /> Electrician is a London-based electrical business delivering
               domestic and commercial electrical services. Our team of qualified
               electricians provides reliable workmanship, clear communication,
               and professional service for inspections, testing, installations,
@@ -263,8 +299,8 @@ export default function App() {
               <li>EICR, inspection & testing, and installations</li>
               <li>Serving landlords, homeowners, agents, and businesses</li>
               <li>Based in London, England</li>
-              <li>Website: DBX1Sparky.co.uk</li>
-              <li>Email: info@dbx1sparky.co.uk</li>
+              <li>Website: db<strong style={{color:'#22c55e'}}>X</strong>1sparky.co.uk</li>
+              <li>Email: info@db<strong style={{color:'#22c55e'}}>X</strong>1sparky.co.uk</li>
             </ul>
           </div>
         </div>
@@ -273,7 +309,7 @@ export default function App() {
       <section id="team" className="section">
         <div className="container">
           <p className="section-label">Team</p>
-          <h3>Meet the DBX1 Electrician team</h3>
+          <h3>Meet the <BrandName /> Electrician team</h3>
           <p className="section-intro">
             Add real team photos here so visitors can see who they are hiring
             and build trust before getting in touch.
@@ -284,7 +320,7 @@ export default function App() {
                 <img src={member.image} alt={member.name} className="team-img" />
                 <h4>{member.name}</h4>
                 <p className="role">{member.role}</p>
-                <p>{member.bio}</p>
+                <p>{renderBrand(member.bio)}</p>
               </div>
             ))}
           </div>
@@ -311,7 +347,7 @@ export default function App() {
 
       <section id="contact" className="section contact">
         <div className="container">
-          <h3>Contact DBX1 Electrician</h3>
+          <h3>Contact <BrandName /> Electrician</h3>
           <p>
             For EICRs, landlord electrical certificates, inspection and testing,
             fault finding, consumer unit upgrades, and new installations in
@@ -320,8 +356,8 @@ export default function App() {
           <div className="contact-box">
             <p><strong>Phone:</strong> <a href="tel:+4420335986058">0203 359 86058</a></p>
             <p><strong>WhatsApp:</strong> <a href="https://wa.me/447884067740" target="_blank" rel="noreferrer">07884 067740</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@dbx1sparky.co.uk">info@dbx1sparky.co.uk</a></p>
-            <p><strong>Website:</strong> <a href="https://www.dbx1sparky.co.uk">DBX1Sparky.co.uk</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@dbx1sparky.co.uk">info@db<strong style={{color:'#22c55e'}}>X</strong>1sparky.co.uk</a></p>
+            <p><strong>Website:</strong> <a href="https://www.dbx1sparky.co.uk">db<strong style={{color:'#22c55e'}}>X</strong>1sparky.co.uk</a></p>
             <p><strong>Location:</strong> London, England</p>
           </div>
         </div>
@@ -330,8 +366,7 @@ export default function App() {
       <footer className="footer">
         <div className="container footer-inner">
           <div className="footer-brand">
-            <span className="logo-3d">db<span className="logo-x">X</span>1</span>
-            <span> Electrician</span>
+            <img src={dbx1Logo} alt="dbX1 Electrician" className="footer-logo" />
             <p>Domestic &amp; Commercial Electrical Services · London</p>
           </div>
           <nav className="footer-nav">
@@ -343,10 +378,10 @@ export default function App() {
           </nav>
           <div className="footer-contact">
             <a href="tel:+4420335986058">0203 359 86058</a>
-            <a href="mailto:info@dbx1sparky.co.uk">info@dbx1sparky.co.uk</a>
+            <a href="mailto:info@dbx1sparky.co.uk">info@db<strong style={{color:'#22c55e'}}>X</strong>1sparky.co.uk</a>
             <a href="https://wa.me/447884067740" target="_blank" rel="noreferrer">WhatsApp</a>
           </div>
-          <p className="footer-copy">&copy; {new Date().getFullYear()} DBX1 Electrician. All rights reserved.</p>
+          <p className="footer-copy">&copy; {new Date().getFullYear()} <BrandName /> Electrician. All rights reserved.</p>
         </div>
       </footer>
     </div>

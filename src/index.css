@@ -71,24 +71,43 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 12px 0;
   gap: 20px;
 }
 
-.logo {
-  margin: 0;
-  font-size: 1rem;
-  color: inherit;
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
 }
 
-body.dark .logo {
-  color: #ffffff;
+.site-logo {
+  height: 130px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .sublogo {
-  margin: 4px 0 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.footer-logo {
+  height: 130px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-brand p {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.65;
 }
 
 .nav-links {
@@ -182,9 +201,15 @@ body.dark .theme-btn {
 
 .hero-buttons {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: nowrap;
   margin-top: 28px;
+}
+
+.hero-buttons .btn {
+  white-space: nowrap;
+  padding: 12px 14px;
+  font-size: 0.9rem;
 }
 
 .section {
@@ -327,6 +352,10 @@ body.dark .theme-btn {
     display: grid;
   }
 
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
   .hero h2 {
     font-size: 2rem;
   }
@@ -363,8 +392,8 @@ body.dark .logo-3d {
 }
 
 .footer {
-  background: var(--text);
-  color: var(--bg);
+  background: #111827;
+  color: #f8fafc;
   padding: 48px 0 28px;
 }
 
@@ -419,6 +448,11 @@ body.dark .footer {
   opacity: 0.85;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.brand-x {
+  color: #22c55e;
+  font-weight: 700;
 }
 
 .stars {
