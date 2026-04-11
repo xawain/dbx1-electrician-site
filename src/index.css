@@ -357,8 +357,8 @@ body.dark .theme-btn {
   }
 
   .nav-links a {
-    font-size: 0.85rem;
-    padding: 6px 10px;
+    font-size: 0.9rem;
+    padding: 7px 13px;
     border-radius: 8px;
     background: var(--soft);
   }
@@ -369,15 +369,15 @@ body.dark .theme-btn {
   }
 
   .sublogo {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .site-logo {
-    height: 55px;
+    height: 78px;
   }
 
   .footer-logo {
-    height: 70px;
+    height: 80px;
   }
 
   .hero-grid,
