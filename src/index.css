@@ -342,14 +342,41 @@ body.dark .theme-btn {
 }
 
 @media (max-width: 640px) {
-  .nav,
-  .nav-links,
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: var(--soft);
+  }
+
+  .theme-btn {
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
+
+  .sublogo {
+    font-size: 0.8rem;
+  }
+
   .hero-grid,
   .grid.three,
   .grid.four,
   .two-col {
     grid-template-columns: 1fr;
-    display: grid;
   }
 
   .hero-buttons {
@@ -357,11 +384,11 @@ body.dark .theme-btn {
   }
 
   .hero h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
-  .nav-links {
-    gap: 12px;
+  .section h3 {
+    font-size: 1.6rem;
   }
 }
 
