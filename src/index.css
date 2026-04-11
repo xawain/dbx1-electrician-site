@@ -343,32 +343,30 @@ body.dark .theme-btn {
 
 @media (max-width: 640px) {
   .nav {
-    display: grid;
-    grid-template-areas:
-      "logo darkbtn"
-      "navlinks navlinks";
-    grid-template-columns: 1fr auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 10px 0;
+    padding: 14px 0 10px;
     gap: 10px;
   }
 
   .logo-link {
-    grid-area: logo;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
   }
 
   .theme-btn {
-    grid-area: darkbtn;
+    position: absolute;
+    top: 14px;
+    right: 0;
     padding: 6px 10px;
     font-size: 1rem;
-    margin-left: 0;
   }
 
   .nav-links {
-    grid-area: navlinks;
     display: flex;
     justify-content: space-between;
     gap: 4px;
@@ -389,7 +387,7 @@ body.dark .theme-btn {
   }
 
   .site-logo {
-    height: 115px;
+    height: 130px;
   }
 
   .footer-logo {
