@@ -173,10 +173,11 @@ export default function App() {
             <a href="#team">Team</a>
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
-            <button className="theme-btn" onClick={() => setDark(!dark)}>
-              {dark ? "☀️" : "🌙"}
-            </button>
           </div>
+
+          <button className="theme-btn" onClick={() => setDark(!dark)}>
+            {dark ? "☀️" : "🌙"}
+          </button>
         </div>
       </header>
 
