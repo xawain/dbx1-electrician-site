@@ -1,11 +1,42 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+// ── EmailJS credentials ──────────────────────────────────────────────────────
+// 1. Sign up free at https://www.emailjs.com
+// 2. Create a service (e.g. Gmail) and note the Service ID
+// 3. Create an email template and note the Template ID
+// 4. Copy your Public Key from Account → API Keys
+// Then replace the three placeholder strings below.
+const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function App() {
   const [dark, setDark] = useState(false);
+  const formRef = useRef(null);
+  const [formStatus, setFormStatus] = useState("idle"); // idle | sending | success | error
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
   }, [dark]);
+
+  async function handleQuoteSubmit(e) {
+    e.preventDefault();
+    setFormStatus("sending");
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+      setFormStatus("success");
+      formRef.current.reset();
+    } catch {
+      setFormStatus("error");
+    }
+  }
 
   const services = [
     {
@@ -76,14 +107,17 @@ export default function App() {
   const reviews = [
     {
       name: "London Landlord",
+      stars: 5,
       text: "Very professional and easy to deal with. The EICR report was clear and the job was completed quickly."
     },
     {
       name: "Property Manager",
+      stars: 5,
       text: "Reliable service for certificates and inspection work. Good communication throughout."
     },
     {
       name: "Homeowner",
+      stars: 5,
       text: "Turned up on time, explained everything clearly, and carried out the work neatly."
     }
   ];
@@ -151,24 +185,43 @@ export default function App() {
 
           <div className="card">
             <h3>Quick Quote</h3>
-            <form className="quote-form">
-              <input type="text" placeholder="Full name" />
-              <input type="tel" placeholder="Phone number" />
-              <input type="email" placeholder="Email address" />
-              <select>
-                <option>Service needed</option>
-                <option>Landlord EICR</option>
-                <option>Inspection & Testing</option>
-                <option>New Installation</option>
-                <option>Consumer Unit Upgrade</option>
-                <option>Fault Finding</option>
-                <option>Minor Works & Remedials</option>
-              </select>
-              <textarea rows="4" placeholder="Tell us about the job"></textarea>
-              <button type="button" className="btn btn-primary full">
-                Send Request
-              </button>
-            </form>
+            {formStatus === "success" ? (
+              <div className="form-success">
+                <p>Thanks! We'll be in touch shortly.</p>
+                <button
+                  className="btn btn-primary full"
+                  onClick={() => setFormStatus("idle")}
+                >
+                  Send Another
+                </button>
+              </div>
+            ) : (
+              <form className="quote-form" ref={formRef} onSubmit={handleQuoteSubmit}>
+                <input type="text"  name="from_name"  placeholder="Full name"     required />
+                <input type="tel"   name="phone"       placeholder="Phone number"  required />
+                <input type="email" name="from_email"  placeholder="Email address" required />
+                <select name="service" required defaultValue="">
+                  <option value="" disabled>Service needed</option>
+                  <option>Landlord EICR</option>
+                  <option>Inspection &amp; Testing</option>
+                  <option>New Installation</option>
+                  <option>Consumer Unit Upgrade</option>
+                  <option>Fault Finding</option>
+                  <option>Minor Works &amp; Remedials</option>
+                </select>
+                <textarea name="message" rows="4" placeholder="Tell us about the job" />
+                {formStatus === "error" && (
+                  <p className="form-error">Something went wrong — please try again or call us directly.</p>
+                )}
+                <button
+                  type="submit"
+                  className="btn btn-primary full"
+                  disabled={formStatus === "sending"}
+                >
+                  {formStatus === "sending" ? "Sending…" : "Send Request"}
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </section>
@@ -245,7 +298,10 @@ export default function App() {
           <div className="grid three">
             {reviews.map((review) => (
               <div key={review.name} className="card">
-                <p>“{review.text}”</p>
+                <div className="stars" aria-label={`${review.stars} out of 5 stars`}>
+                  {"★".repeat(review.stars)}{"☆".repeat(5 - review.stars)}
+                </div>
+                <p>"{review.text}"</p>
                 <strong>{review.name}</strong>
               </div>
             ))}
@@ -262,15 +318,37 @@ export default function App() {
             London.
           </p>
           <div className="contact-box">
-            <p><strong>Phone:</strong> 0203 359 86058</p>
-            <p><strong>WhatsApp:</strong> 07884 067740</p>
-            <p><strong>Email:</strong> info@dbx1sparky.co.uk</p>
-            <p><strong>Website:</strong> DBX1Sparky.co.uk</p>
+            <p><strong>Phone:</strong> <a href="tel:+4420335986058">0203 359 86058</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/447884067740" target="_blank" rel="noreferrer">07884 067740</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@dbx1sparky.co.uk">info@dbx1sparky.co.uk</a></p>
+            <p><strong>Website:</strong> <a href="https://www.dbx1sparky.co.uk">DBX1Sparky.co.uk</a></p>
             <p><strong>Location:</strong> London, England</p>
-            <p><strong>Team:</strong> Dawain (Rasta), Kirk, Dunga, Johnny</p>
           </div>
         </div>
       </section>
+
+      <footer className="footer">
+        <div className="container footer-inner">
+          <div className="footer-brand">
+            <span className="logo-3d">db<span className="logo-x">X</span>1</span>
+            <span> Electrician</span>
+            <p>Domestic &amp; Commercial Electrical Services · London</p>
+          </div>
+          <nav className="footer-nav">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div className="footer-contact">
+            <a href="tel:+4420335986058">0203 359 86058</a>
+            <a href="mailto:info@dbx1sparky.co.uk">info@dbx1sparky.co.uk</a>
+            <a href="https://wa.me/447884067740" target="_blank" rel="noreferrer">WhatsApp</a>
+          </div>
+          <p className="footer-copy">&copy; {new Date().getFullYear()} DBX1 Electrician. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
