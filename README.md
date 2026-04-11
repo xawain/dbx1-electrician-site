@@ -1,6 +1,6 @@
 # dbX1 Electrician - Website
 
-Professional electrical services website for DBX1 Electrician, serving London with EICR certificates, inspections, testing, installations, and more.
+Professional electrical services website for dbX1 Electrician, serving London with EICR certificates, inspections, testing, installations, and more.
 
 ## 🚀 Features
 
@@ -12,7 +12,7 @@ Professional electrical services website for DBX1 Electrician, serving London wi
 
 ### Content Sections
 - **Hero Section** - Eye-catching intro with quick quote form
-- **Services** - 6 electrical services with fun emoji icons:
+- **Services** - 6 electrical services with emoji icons:
   - ⚡ Landlord EICR Certificates
   - 🔍 Inspection & Testing
   - 🔧 New Installations
@@ -20,13 +20,13 @@ Professional electrical services website for DBX1 Electrician, serving London wi
   - 🚨 Fault Finding
   - 🛠️ Minor Works & Remedials
 
-- **Team** - Meet the DBX1 team with cartoon character avatars
-- **Reviews** - Customer testimonials
+- **Team** - Meet the full dbX1 team with cartoon character avatars
+- **Reviews** - Customer testimonials with star ratings
 - **Contact** - Phone, WhatsApp, email, and contact form
 
 ### Technology Stack
 - **React 19** - Modern UI framework
-- **Vite 8** - Fast build tool with HMR
+- **Vite** - Fast build tool with HMR
 - **Google Fonts** - Inter & Poppins for typography
 - **Responsive CSS** - Mobile-first design
 
@@ -41,10 +41,14 @@ Professional electrical services website for DBX1 Electrician, serving London wi
 
 ## 👥 Team
 
-- **Dawain (Rasta)** - CEO & Lead Electrician
+- **Dawain (Rasta)** - Qualified Electrician
 - **Kirk** - Qualified Electrician
 - **Dunga** - Qualified Electrician
 - **Johnny** - Qualified Electrician
+- **Tafari** - Apprentice Electrician
+- **Fabian** - Sales & Communications
+- **Stacy** - Marketing Manager
+- **Dave (AI)** - AI Assistant & Online Operations
 
 ## 🛠️ Development
 
@@ -79,9 +83,9 @@ npm run preview
 - **Phone:** 0203 359 86058
 - **WhatsApp:** 07884 067740
 - **Email:** info@dbx1sparky.co.uk
-- **Website:** DBX1Sparky.co.uk
+- **Website:** dbX1sparky.co.uk
 - **Location:** London, England
 
 ## 📄 License
 
-Private project for DBX1 Electrician
+Private project for dbX1 Electrician
