@@ -355,6 +355,9 @@ body.dark .theme-btn {
 
   .logo-link {
     grid-area: logo;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 
   .theme-btn {
