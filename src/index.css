@@ -369,7 +369,15 @@ body.dark .theme-btn {
   }
 
   .sublogo {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .site-logo {
+    height: 55px;
+  }
+
+  .footer-logo {
+    height: 70px;
   }
 
   .hero-grid,
