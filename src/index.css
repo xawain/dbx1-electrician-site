@@ -316,6 +316,31 @@ body.dark .theme-btn {
   display: block;
 }
 
+.accreditations {
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+
+.accred-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.accred-badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--text);
+  white-space: nowrap;
+}
+
 .contact {
   background: var(--accent);
   color: var(--accent-text);

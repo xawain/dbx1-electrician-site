@@ -270,6 +270,15 @@ export default function App() {
         </div>
       </section>
 
+      <section className="accreditations">
+        <div className="container accred-inner">
+          <div className="accred-badge">✅ NAPIT Registered</div>
+          <div className="accred-badge">✅ Part P Certified</div>
+          <div className="accred-badge">✅ ECS Card Holder</div>
+          <div className="accred-badge">✅ 18th Edition Wiring Regulations</div>
+        </div>
+      </section>
+
       <section id="services" className="section">
         <div className="container">
           <p className="section-label">Services</p>
