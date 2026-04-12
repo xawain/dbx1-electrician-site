@@ -413,7 +413,7 @@ export default function App() {
 
       <a
         href="https://wa.me/447884067740"
-        className="whatsapp-float"
+        className={`whatsapp-float${!cookieConsent ? " whatsapp-float--raised" : ""}`}
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"

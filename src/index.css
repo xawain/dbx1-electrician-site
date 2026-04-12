@@ -521,6 +521,10 @@ body.dark .logo-3d {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.whatsapp-float--raised {
+  bottom: 100px;
+}
+
 .whatsapp-float:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
