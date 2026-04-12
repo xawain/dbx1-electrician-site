@@ -8,9 +8,9 @@ import dbx1Logo from "./assets/dbx1_logo.png";
 // 3. Create an email template and note the Template ID
 // 4. Copy your Public Key from Account → API Keys
 // Then replace the three placeholder strings below.
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID  = "service_ah9zzh5";
+const EMAILJS_TEMPLATE_ID = "template_8ks8dbm";
+const EMAILJS_PUBLIC_KEY  = "9sk2BMDXpn8m4Ujmu";
 // ─────────────────────────────────────────────────────────────────────────────
 
 function BrandName() {
