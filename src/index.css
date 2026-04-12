@@ -311,9 +311,9 @@ body.dark .theme-btn {
   border-radius: 16px;
   margin-bottom: 16px;
   width: 100%;
-  height: 200px;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   display: block;
 }
 
