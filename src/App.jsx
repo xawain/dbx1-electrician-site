@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import dbx1Logo from "./assets/dbx1_logo.png";
+import dungaPhoto from "./assets/dunga.png";
+import fabianPhoto from "./assets/fabian.png";
+import johnnyPhoto from "./assets/johnny.jpeg";
+import stacyPhoto from "./assets/stacy.png";
+import tafariPhoto from "./assets/tafari.png";
 
 // ── EmailJS credentials ──────────────────────────────────────────────────────
 // 1. Sign up free at https://www.emailjs.com
@@ -113,31 +118,31 @@ export default function App() {
       name: "Dunga",
       role: "Qualified Electrician",
       bio: "Highly skilled in practical site work, fault diagnosis, inspection and testing, and electrical upgrades, delivering dependable solutions across a diverse range of residential and commercial properties.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%238B4513' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23704214'/%3E%3Ccircle cx='135' cy='88' r='7' fill='%23FFD700'/%3E%3Ccircle cx='165' cy='88' r='7' fill='%23FFD700'/%3E%3Ccircle cx='120' cy='110' r='4' fill='%23000'/%3E%3Ccircle cx='180' cy='110' r='4' fill='%23000'/%3E%3Cpath d='M 140 120 Q 150 130 160 120' stroke='%23FFF' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%23228B22'/%3E%3Crect x='110' y='160' width='16' height='85' fill='%23704214' rx='5'/%3E%3Crect x='174' y='160' width='16' height='85' fill='%23704214' rx='5'/%3E%3C/svg%3E"
+      image: dungaPhoto
     },
     {
       name: "Johnny",
       role: "Qualified Electrician",
       bio:  "Providing expert support across installations, inspection and testing, and remedial works, with a specialism in high-end electrical installations and bespoke design projects for dbX1 Electrician customers.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23FF8C00' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Cpath d='M 130 85 Q 135 80 140 85' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cpath d='M 160 85 Q 165 80 170 85' stroke='%23000' stroke-width='2' fill='none'/%3E%3Ccircle cx='138' cy='100' r='5' fill='%23000'/%3E%3Ccircle cx='162' cy='100' r='5' fill='%23000'/%3E%3Cpath d='M 140 115 L 160 115 L 155 125 L 145 125 Z' fill='%23FF69B4'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%2300CED1'/%3E%3Crect x='110' y='155' width='18' height='90' fill='%23FFDBAC' rx='5'/%3E%3Crect x='172' y='155' width='18' height='90' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
+      image: johnnyPhoto
     },
     {
       name: "Tafari",
       role: "Apprentice Electrician",
       bio: "Newly joined the dbX1 Electrician team, Tafari is an apprentice electrician learning the trade and gaining hands-on experience across domestic and commercial electrical work.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%236A0DAD' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23704214'/%3E%3Ccircle cx='135' cy='90' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='6' fill='%23000'/%3E%3Cpath d='M 140 112 Q 150 122 160 112' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%239B30FF'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23704214' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23704214' rx='5'/%3E%3C/svg%3E"
+      image: tafariPhoto
     },
     {
       name: "Fabian",
       role: "Sales & Communications",
       bio: "Fabian works closely with the dbX1 Electrician team on the soft side of operations — handling sales, client communications, and ensuring every customer has a smooth and professional experience from first contact to job completion.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23007B5E' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Ccircle cx='135' cy='90' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='6' fill='%23000'/%3E%3Cpath d='M 138 112 Q 150 124 162 112' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%2300A86B'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23FFDBAC' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
+      image: fabianPhoto
     },
     {
       name: "Stacy",
       role: "Marketing Manager",
       bio: "Stacy leads all marketing activity for dbX1 Electrician, managing both online presence and local advertising to grow the brand and bring in new customers across London.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23C2185B' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Cpath d='M 120 75 Q 150 55 180 75 Q 185 95 150 90 Q 115 95 120 75' fill='%23A0522D'/%3E%3Ccircle cx='135' cy='92' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='92' r='6' fill='%23000'/%3E%3Cpath d='M 138 112 Q 150 124 162 112' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='70' fill='%23E91E8C'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23FFDBAC' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
+      image: stacyPhoto
     },
     {
       name: "Dave (AI)",
