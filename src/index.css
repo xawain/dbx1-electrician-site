@@ -466,6 +466,45 @@ body.dark .logo-3d {
     0px 0px 20px rgba(255, 255, 255, 0.2);
 }
 
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid #334155;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.cookie-banner a {
+  color: #22c55e;
+  text-decoration: underline;
+}
+
+.cookie-btns {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cookie-btns .btn {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
 .whatsapp-float {
   position: fixed;
   bottom: 28px;

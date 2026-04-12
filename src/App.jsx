@@ -36,6 +36,20 @@ export default function App() {
   const [dark, setDark] = useState(false);
   const formRef = useRef(null);
   const [formStatus, setFormStatus] = useState("idle"); // idle | sending | success | error
+  const [cookieConsent, setCookieConsent] = useState(() =>
+    localStorage.getItem("cookieConsent") || null
+  );
+
+  function handleCookieAccept() {
+    localStorage.setItem("cookieConsent", "accepted");
+    setCookieConsent("accepted");
+    // TODO: initialise Google Analytics here when ready
+  }
+
+  function handleCookieDecline() {
+    localStorage.setItem("cookieConsent", "declined");
+    setCookieConsent("declined");
+  }
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "";
@@ -386,6 +400,16 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {!cookieConsent && (
+        <div className="cookie-banner">
+          <p>We use cookies to improve your experience. See our <a href="#">Privacy Policy</a>.</p>
+          <div className="cookie-btns">
+            <button className="btn btn-primary" onClick={handleCookieAccept}>Accept</button>
+            <button className="btn btn-secondary" onClick={handleCookieDecline}>Decline</button>
+          </div>
+        </div>
+      )}
 
       <a
         href="https://wa.me/447884067740"
