@@ -132,7 +132,8 @@ export default function App() {
       name: "Tafari",
       role: "Apprentice Electrician",
       bio: "Newly joined the dbX1 Electrician team, Tafari is an apprentice electrician learning the trade and gaining hands-on experience across domestic and commercial electrical work.",
-      image: tafariPhoto
+      image: tafariPhoto,
+      imgPosition: "top"
     },
     {
       name: "Fabian",
@@ -335,13 +336,12 @@ export default function App() {
           <p className="section-label">Team</p>
           <h3>Meet the <BrandName /> Electrician team</h3>
           <p className="section-intro">
-            Add real team photos here so visitors can see who they are hiring
-            and build trust before getting in touch.
+            Qualified electricians and support staff delivering professional electrical services across London.
           </p>
           <div className="grid four">
             {team.map((member) => (
               <div key={member.name} className="card team-card">
-                <img src={member.image} alt={member.name} className="team-img" />
+                <img src={member.image} alt={member.name} className="team-img" style={{objectPosition: member.imgPosition || "center"}} />
                 <h4>{member.name}</h4>
                 <p className="role">{member.role}</p>
                 <p>{renderBrand(member.bio)}</p>
