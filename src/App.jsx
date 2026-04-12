@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import dbx1Logo from "./assets/dbx1_logo.png";
+import dawainPhoto from "./assets/dawain.png";
+import kirkPhoto from "./assets/kirk.png";
 import dungaPhoto from "./assets/dunga.png";
 import fabianPhoto from "./assets/fabian.png";
 import johnnyPhoto from "./assets/johnny.jpeg";
@@ -106,13 +108,13 @@ export default function App() {
       name: "Dawain (Rasta)",
       role: "Qualified Electrician",
       bio: "Founder of dbX1 Electrician, delivering high-quality electrical services with a strong commitment to safety, precision, and dependable customer service across both domestic and commercial projects..",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%23FFD700' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23D2691E'/%3E%3Ccircle cx='135' cy='90' r='6' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='6' fill='%23000'/%3E%3Cpath d='M 140 110 Q 150 120 160 110' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='170' rx='55' ry='70' fill='%23FF6347'/%3E%3Crect x='110' y='160' width='15' height='80' fill='%23D2691E' rx='5'/%3E%3Crect x='175' y='160' width='15' height='80' fill='%23D2691E' rx='5'/%3E%3C/svg%3E"
+      image: dawainPhoto
     },
     {
       name: "Kirk",
       role: "Qualified Electrician",
       bio: "Skilled electrician with experience across domestic and commercial projects, providing high-quality installations and dependable electrical services.",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Crect fill='%234169E1' width='300' height='300'/%3E%3Ccircle cx='150' cy='100' r='45' fill='%23FFDBAC'/%3E%3Ccircle cx='135' cy='90' r='7' fill='%23000'/%3E%3Ccircle cx='165' cy='90' r='7' fill='%23000'/%3E%3Cpath d='M 140 115 Q 150 125 160 115' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cellipse cx='150' cy='175' rx='55' ry='65' fill='%230047AB'/%3E%3Crect x='105' y='165' width='20' height='85' fill='%23FFDBAC' rx='5'/%3E%3Crect x='175' y='165' width='20' height='85' fill='%23FFDBAC' rx='5'/%3E%3C/svg%3E"
+      image: kirkPhoto
     },
     {
       name: "Dunga",
